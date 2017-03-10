@@ -1,0 +1,19 @@
+<template name="profile">
+    <div class="col-md-6">
+        <h2 class="head-snippet">User Profile</h2>
+        <form>
+            <div class="form-group">
+                <label class="control-label">First Name</label>
+                <input type="text" id="firstname" class="form-control input-sm" value="{{currentUser.profile.firstname}}"/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Last Name</label>
+                <input type="text" id="lastname" class="form-control input-sm" value="{{currentUser.profile.lastname}}"/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Email</label>
+                <input type="text" id="email" class="form-control input-sm" value="{{currentUser.profile.email}}"/>
+            </div>
+        </form>
+    </div>
+</template>

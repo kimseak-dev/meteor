@@ -1,0 +1,35 @@
+<template name="register">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form id="signup" class="register-form">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="plain huge">Register</h3>
+                        <small>Already Register ?<a href="/signin">register</a></small>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group col-lg-12">
+                            <label class="">Email</label>
+                            <input type="email" class="form-control plain" name="email"/>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label class="">First Name</label>
+                            <input type="text" class="form-control plain" name="firstname"/>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label class="">Last Name</label>
+                            <input type="text" class="form-control plain" name="lastname"/>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label class="plain">Password</label>
+                            <input type="password" class="form-control plain" name="password"/>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button type="submit" class="btn btn-info plain">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
