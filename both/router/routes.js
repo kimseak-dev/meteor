@@ -1,3 +1,17 @@
+FlowRouter.route('/admin',{
+    subcriptions:function(params){
+        Meteor.subscribe('category');
+    },
+    action: function () {
+        if(Roles.userIsInRole(Meteor.userId(), 'admin')){
+            FlowLayout.render('layout', {sidebar: '', main:'admin', cart:''});
+        }else{
+            FlowLayout.render('layout', {sidebar: '', main:'unauthorized', cart:''});
+        }
+
+    }
+});
+
 FlowRouter.route('/register',{
     action: function () {
         FlowLayout.render('layout', {sidebar: '', main:'register', cart:''});
@@ -33,6 +47,9 @@ FlowRouter.route('/profile',{
 });
 
 FlowRouter.route(['/', '/home'],{
+    subcriptions:function(params){
+        Meteor.subscribe('category');
+    },
     action: function () {
         console.log("Running action render templates into layouts.");
         FlowLayout.render('layout', {sidebar: 'sidebar', main:'home', cart:'cart'});
@@ -42,6 +59,7 @@ FlowRouter.route(['/', '/home'],{
 
 FlowRouter.route('/category/:categoryName',{
     subcriptions:function(params){
+        Meteor.subscribe('category');
         console.log("SUBSCRIBE", params);
         //make sure subscriptions exist
     },

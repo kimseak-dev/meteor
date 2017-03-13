@@ -26,3 +26,10 @@ meteorhacks:flow-router
 meteorhacks:flow-layout
 mizzao:bootstrap-3
 accounts-password
+peerlibrary:fs
+cfs:standard-packages
+cfs:filesystem
+cfs:gridfs
+alanning:roles
+matb33:collection-hooks
+dburles:collection-helpers

@@ -15,6 +15,7 @@ Template.register.events({
             lastname : lastname
         }, function(res){
             console.log(res);
+            console.log(email);
         });
     }
 });

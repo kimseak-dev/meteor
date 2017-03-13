@@ -14,6 +14,21 @@
                 <label class="control-label">Email</label>
                 <input type="text" id="email" class="form-control input-sm" value="{{currentUser.profile.email}}"/>
             </div>
+            <label class="control-label">Avatar</label>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                  <span class="btn btn-success btn-file">
+                       Browse...
+                      <input type="file" accept=".gif,.jpg,.png" class="myFileInput" id="avatar"/>
+                  </span>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{currentUser.profile.avatar}}" alt="Avatar" width="40px" class="img-circle avatar-upload"/>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <a href="#" class="btn btn-info center-block saveProfileBtn">Save Profile</a>
+            </div>
         </form>
     </div>
 </template>

@@ -4,17 +4,31 @@
             <div class="navbar-header">
                 <a href="/admin" class="navbar-brand bigger">Quiet Earth</a>
             </div>
+
             <div class="collapse navbar-collapse" id="main-nav">
-                {{#if currentUser}}
-                    <div class="navbar-right plain">
-                        <a href="/signout" class="btn  btn-danger navbar-btn">sign out {{currentUser.profile.firstname}}</a>
-                    </div>
-                {{else}}
-                    <div class="navbar-right plain">
-                        <a href="/signin" class="btn btn-default navbar-btn">sign In</a>
-                        <a href="/register" class="btn btn-primary navbar-btn">Register</a>
-                    </div>
-                {{/if}}
+                <ul class ="nav navbar-nav">
+                    <li class="active">
+                        <a href="/">Home</a>
+                    </li>
+                    {{#if isInRole 'admin'}}
+                        <li><a href="/admin">Admin</a></li>
+                    {{/if}}
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/cart">Cart</a></li>
+                </ul>
+
+                <div class="navbar-right plain">
+                    {{#if currentUser}}
+
+                    <a style="margin-left:20px;" href="/signout" class="btn btn-danger navbar-btn">
+                        <img width="20px" src="{{currentUser.profile.avatar}}" alt="Avatar" class="img-circle"/>
+                        Sign Out  {{currentUser.profile.firstname}} {{currentUser.profile.lastname}}</a>
+
+                    {{else}}
+                    <a href="/signin" class="btn btn-default navbar-btn">Sign In</a>
+                    <a href="/register" class="btn btn-primary navbar-btn">Register</a>
+                    {{/if}}
+                </div>
             </div>
         </div>
     </nav>
